@@ -24,7 +24,8 @@ WinWait, [No Name] - GVIM
 WinActivate 
 WinSetTitle, New
 send #{Right}
-; still need to switch to Dvorak layout... handled in either .gvimrc
+; still need to switch to Dvorak layout and set syntax-highlighting. 
+; handled in either .gvimrc or one of the codeHelps ahk scripts
 return
 
    ; wikisearch
