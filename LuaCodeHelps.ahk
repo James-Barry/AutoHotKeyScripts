@@ -15,8 +15,13 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 !y::Send for i=1, do{enter 2}end{enter}{Up 2}{End}{Left 4}		;norm i loop	-y
 !w::Send while 1 do {enter 2}wait() {enter}end{enter}{Up 3}		;While loop	-w
 !p::Send print(""){Left 2}						;print		-p
+!k::Send function cor(){enter}{tab}while true do{enter}{enter}{tab}wait(){enter}{tab}end{enter}end{enter}cr = coroutine.create(cor){enter}coroutine.resume(cr){enter}{Up 6}{tab}			;whole cor thing 	-k
 
+!r::Send game:getService("RunService").Stepped:connect(function(){enter 2}end){up}
+								;runservice step	-r
+!b::Send :connect(function(){enter 2}end){Up}			;connect function	-b
 !g::Send :getChildren()						;getChildren()	-g
+!v::Send game:getService(""){Left 2}					;getService	-v
 !c::Send if  then{Enter 2}end{Up 2}{End}{Left 5}			;if then end	-c
 !h::Send :findFirstChild(""){Left 2}					;first child 	-h
 !t::Send table.insert(tbl,){Left}					;table insert	-t
